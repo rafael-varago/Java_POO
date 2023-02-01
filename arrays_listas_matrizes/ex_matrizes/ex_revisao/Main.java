@@ -8,10 +8,11 @@ public class Main {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
+		//lendo o tamanho da matriz e declarando-a
 		int n = sc.nextInt();
-
 		int[][] matriz = new int[n][n];
 
+		//lendo a matriz
 		for (int i = 0; i < matriz.length; i++) {
 			for (int j = 0; j < matriz[i].length; j++) {
 				matriz[i][j] = sc.nextInt();
