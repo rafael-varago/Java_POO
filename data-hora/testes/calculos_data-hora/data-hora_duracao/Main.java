@@ -45,20 +45,23 @@ public class Main {
 
 		//----------------------------------------------------------------------------------------------------------------------------------------------
 
-		//duracao entre duas data-horas dadas, porem observe que coloco o atTime() para tornar possivel esse calculo de duracao entre LocalDate
+		//duracao entre duas data-horas dadas LocalDate, porem observe que coloco o atTime() para tornar possivel esse calculo de duracao entre LocalDate
 		/*o atTime() serviu para "converter" o LocalDate em LocalDateTime.
 		 * saiba que voce pode colocar .atStartOfDay() se quiser substituir pelo .atTime(0,0)
 		 */
 		Duration t1 = Duration.between(pastWeekLocalDate.atTime(0,0), d04.atTime(0,0));
-		// faz a duracao entre duas data-horas dadas
+		// faz a duracao entre duas data-horas LocalDateTime dadas
 		Duration t2 = Duration.between(pastWeekLocalDateTime, d05);
-		//
+		// faz a duracao entre duas datas-horas Instant dadas
 		Duration t3 = Duration.between(pastWeekInstant, d06);
+		// faz a duracao entre duas data-horas dadas, porem sendo a primeira posterior a segunda (gera dif negativa)
+		Duration t4 = Duration.between(d06, pastWeekInstant);
 		
 		// printa a duracao calculada em dias
 		System.out.println("t1 dias: " + t1.toDays());
 		System.out.println("t2 dias: " + t2.toDays());
 		System.out.println("t3 dias: " + t3.toDays());
+		System.out.println("t4 dias: " + t4.toDays());
 		
 
 	}
