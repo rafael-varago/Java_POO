@@ -22,7 +22,6 @@ public class Main {
 		/* perceba que ele armazena o horario local, logo como -03 eh o horario de brasilia,
 		 * ele coloca o de londres, que eh 3 horas a mais.
 		 * lembre-se que o Instant da o horario de Londres!
-		 * 
 		 */
 		Instant d07 = Instant.parse("2023-02-11T02:30:25-03:00");
 		
